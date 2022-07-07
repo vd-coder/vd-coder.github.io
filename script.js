@@ -12,6 +12,7 @@ ul.innerHTML = "";
 //     console.log(data.data.result);
 //   });
 form.addEventListener("submit", async (e) => {
+  ul.innerHTML = "";
   const validProblems = new Array();
   e.preventDefault();
   const userId = handle.value;
