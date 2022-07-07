@@ -31,6 +31,8 @@ form.addEventListener("submit", async (e) => {
 
   const allSubmission = userData.data.result;
   for (let submission of allSubmission) {
+    if (submission.verdict != "OK") continue;
+
     // if (validProblems.indexOf(submission.problem) != -1) continue;
     const rating = submission.problem.rating;
     if (rating < minrating || rating > maxrating) continue;
