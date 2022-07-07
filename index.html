@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codeforces Problem Analyser</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text mb-100 h1"
+          >Codeforces Solved Problems Analyser</span
+        >
+      </nav>
+    </div>
+
+    <div class="input">
+      <form id="form">
+        <div class="handle">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input
+              type="text"
+              class="form-control user-id"
+              placeholder="Codeforces Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="binary search"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              binary search
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="greedy"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              greedy
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="brute force"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              brute force
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="combinatorics"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              combinatorics
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="trees"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              trees
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="number theory"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              number theory
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="graphs"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              graphs
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="dp"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault"> dp </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input topics"
+              type="checkbox"
+              value="constructive algorithms"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              constructive algorithms
+            </label>
+          </div>
+        </div>
+
+        <div class="difficulty">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Min Rating</span>
+            </div>
+            <input
+              type="number"
+              class="form-control low"
+              aria-label="Amount (to the nearest dollar)"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Max Rating</span>
+            </div>
+            <input
+              type="number"
+              class="form-control hi"
+              aria-label="Amount (to the nearest dollar)"
+            />
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+    <div class="output">
+      <ul class="problem-list"></ul>
+    </div>
+  </body>
+</html>
