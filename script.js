@@ -4,7 +4,10 @@ const mnRating = document.querySelector(".low");
 const mxRating = document.querySelector(".hi");
 const allTopics = document.querySelectorAll(".topics");
 const ul = document.querySelector(".problem-list");
+const ul1=document.querySelector(".problem-list");
+const ul2=document.querySelector(".problem-list");
 ul.innerHTML = "";
+
 // console.log(allTopics);
 // axios
 //   .get("https://codeforces.com/api/user.status?handle=vd__coder")
