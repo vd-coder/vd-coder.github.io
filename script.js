@@ -6,6 +6,7 @@ const allTopics = document.querySelectorAll(".topics");
 const ul = document.querySelector(".problem-list");
 const ul1=document.querySelector(".problem-list");
 const ul2=document.querySelector(".problem-list");
+const changes_in_feature_branch=document.querySelector(".problem-list");
 ul.innerHTML = "";
 
 // console.log(allTopics);
